@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+
+	# serve python files
+
+	DocumentRoot /vagrant/app/
+	ServerName www.example.com
+
+	<Directory /vagrant/app/>
+		Options Indexes FollowSymLinks MultiViews ExecCGI
+
+		AddHandler cgi-script .cgi
+		AddHandler wsgi-script .wsgi
+		AddHandler wsgi-script .py
+
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /vagrant/logs/error.log
+	CustomLog /vagrant/logs/access.log common
+
+</VirtualHost>
