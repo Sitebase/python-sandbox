@@ -21,6 +21,13 @@ and you are ready to start writing some awesome Python code
 * access.log: These are the regular apache access logs
 * error.log: When your Python scripts give a 500 error take a look in this file. It will give you more information about what is going wrong with your script.
 
+# app
+
+App is the folder that will be used as document root in your apache.
+To run an example python script open your browser and go to:
+
+>http://192.168.33.13/1-hello-env/main.py
+
 # Note
 
 Keep in mind that Python is completely new to me so I can't garantee that this is the best way of getting started.
