@@ -15,7 +15,6 @@ package { $devPackages:
 }
 
 file {'/etc/apache2/conf.d/python-wsgi-vhost':
-	notify  => Service["apache2"],
 	ensure  => file,
 	require => Package['apache2'],
 	content => template('sitebase/apache-python-wsgi-vhost.erb'),
